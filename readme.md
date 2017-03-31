@@ -36,3 +36,8 @@ Use one of these to include console logging in your horseman threads
 DEBUG=horseman node server.js
 DEBUG=horseman nodemon server.js
 ```
+
+## Usage
+Visit http://localhost:3000/ for instructions.
+
+http://localhost:3000/get-url?url=http://accredible.com/ will return a JSON object with a key `html` which contains the response HTML from the URL supplied as a parameter.
