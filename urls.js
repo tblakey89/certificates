@@ -9,10 +9,9 @@ var horseman = new Horseman({
     diskCache: true, // This speeds things up a lot, manual caching would probably be superior
 });
 
-// Reads an URL, and returns the entire document
+// Reads and "parses" an URL
 function getUrl(url){
     return new Promise(function(resolve, reject){
-        // Grab and "parse" the url
         horseman
             .open(url)
             .html()
@@ -46,7 +45,7 @@ function getUrl(url){
             // ... code here
         })
 
-    Where getHorseman() might pull an inactive horseman
+    Where getHorseman() might: pull an inactive horseman
      from a pool, wait for an active horseman to finish,
      or even add a new horseman to the pool. GC would
      be fun too. You could have methods like

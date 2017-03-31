@@ -5,7 +5,7 @@ var app = express();
 // Serve static files
 app.use(express.static('public'))
 
-// Get information about the URL
+// Returns information about the URL
 app.get('/get-url', function(req, res){
     urls.getUrl(req.query.url)
         .then(function(response){

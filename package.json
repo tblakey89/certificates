@@ -1,7 +1,7 @@
 {
   "name": "accredible-fullstack-assessment",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "David \"oodavid\" King",
   "dependencies": {
     "bluebird": "^3.5.0",
