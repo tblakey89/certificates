@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Accredible :: Fullstack Assessment - Starter Repo</title>
+  <title>Accredible :: Fullstack Assessment - Starter Repo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
-<body>
-	<h1>Accredible :: Fullstack Assessment - Starter Repo</h1>
-	<p>All files within <code>./public/</code> are served as static files</p>
-	<p>The route <code><a href="/get-url?url=http://accredible.com/">/get-url?url=http://accredible.com/</a></code> runs <code>./urls.js:getUrl()</code></p>
-	<ul>
-		<li>/get-url can be a little slow, I've enabled the built in horseman caching, it's still not very quick</li>
-	</ul>
+<body ng-app="accredible">
+  <nav class="navbar navbar-default">
+    
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>+ Add a Credential from Magento</h2>
+      <input type="text" class="form-control" placeholder="magento URL">
+      <p><a class="btn btn-primary btn-lg" role="button">Verify</a></p>
+    </div>
+  </div>
 </body>
 </html>

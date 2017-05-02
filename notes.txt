@@ -1,0 +1,33 @@
+FIRST COMMIT THOUGHTS
+- My interpretation of the mock ups implies that we need to display an
+  existing credential on the page, probably in its own component, we will
+  then add the Magento cerfificates underneath in a ng-repeat.
+- We will use ng-messages for the credential form for the errors when
+  inputting the URL
+- We will make the form flexible, it doesn't have to be only Magento, all we
+  need to do is send a different regexp and name for it to be flexible
+- The angular code can be written with only two functions, one in the form
+  component to check the validity of the URL before calling the second
+  function, which will be in the certificate controller, passed to the form
+- Ideally we would minify the javascript and keep the dependencies in the
+  package.json, but I am not too familiar with node.js.
+- We could use the http service, or ng-resource for the get_url call
+- The get_url call can be used for any certification website, not just
+  Magento, we could use a switch statement, or some regexp, or something,
+  to determine if it should check through the Magento html. Default is
+  an error
+- We could show server side error within loader, asking the user to try
+  again, or re-enter URL
+
+VIDEO IDEAS
+- Discuss that I should have minified the JavaScript files
+- Talk about the vm instead of $scope stuff
+- Talk about the styleguide
+- Discuss the advantages of components (over directives, and code in
+  controllers), component based architecture?
+- Explain structure, my reason for the controllers, etc
+  
+BEFORE SUBMIT CHECKS
+- Specs are passing
+- Don't forget to check capitalisations, colours, etc
+- Add a reference to styleguide, as references are on the rubric thing

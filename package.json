@@ -10,7 +10,20 @@
     "phantomjs-prebuilt": "^2.1.14"
   },
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/accredible/accredible-fullstack-assessment.git"
+    "type": "git",
+    "url": "git+https://github.com/accredible/accredible-fullstack-assessment.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "This starter repo uses node / npm and has the following features to help you get started:",
+  "bugs": {
+    "url": "https://github.com/accredible/accredible-fullstack-assessment/issues"
+  },
+  "homepage": "https://github.com/accredible/accredible-fullstack-assessment#readme",
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.4.1"
   }
 }
