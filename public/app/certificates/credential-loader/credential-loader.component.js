@@ -5,7 +5,7 @@
     .module('accredible')
     .component('credentialLoader', {
       bindings: {
-        credential: '<'
+        visible: '<'
       },
       templateUrl: 'credential-loader.html',
     });

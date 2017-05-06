@@ -7,14 +7,16 @@
     "bluebird": "^3.5.0",
     "express": "^4.15.2",
     "node-horseman": "^3.2.0",
-    "phantomjs-prebuilt": "^2.1.14"
+    "phantomjs-prebuilt": "^2.1.14",
+    "angular": "^1.6.4",
+    "angular-messages": "^1.6.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/accredible/accredible-fullstack-assessment.git"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "webpack; node server.js"
   },
   "description": "This starter repo uses node / npm and has the following features to help you get started:",
   "bugs": {
@@ -24,6 +26,10 @@
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^2.4.1"
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.5.1"
   }
 }

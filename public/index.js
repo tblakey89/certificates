@@ -1,0 +1,9 @@
+require('./app/app.js');
+require('./app/index.controller.js');
+require('./app/certificates/certificate.controller.js');
+require('./app/certificates/add-credential-form/add-credential-form.component.js');
+require('./app/certificates/add-credential-form/add-credential-form.template.js');
+require('./app/certificates/credential/credential.component.js');
+require('./app/certificates/credential/credential.template.js');
+require('./app/certificates/credential-loader/credential-loader.component.js');
+require('./app/certificates/credential-loader/credential-loader.template.js');

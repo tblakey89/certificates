@@ -5,7 +5,7 @@
     .module('accredible')
     .component('addCredentialForm', {
       bindings: {
-        getUrl: '<'
+        getUrl: '<',
         name: '<',
         regExp: '<'
       },
@@ -18,8 +18,9 @@
     vm.verify = verify;
    
     function verify() {
+      vm.addCredentialForm.$setSubmitted(true);
       if (vm.addCredentialForm.$valid) {
-        vm.getUrl();
+        vm.getUrl(vm.addCredentialForm.url.$viewValue);
       }
     }
   }
