@@ -14,7 +14,7 @@ function getUrl(url){
     return new Promise(function(resolve, reject){
         horseman
             .open(url)
-            .html()
+            .html('.cert-table')
             .then(function(html){
                 resolve({
                     html: html,

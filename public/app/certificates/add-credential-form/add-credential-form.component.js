@@ -18,9 +18,11 @@
     vm.verify = verify;
    
     function verify() {
-      vm.addCredentialForm.$setSubmitted(true);
+      vm.addCredentialForm.$setSubmitted();
       if (vm.addCredentialForm.$valid) {
         vm.getUrl(vm.addCredentialForm.url.$viewValue);
+        vm.addCredentialForm.$setPristine();
+        vm.url = undefined;
       }
     }
   }

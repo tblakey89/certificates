@@ -3,9 +3,9 @@
 
   angular
   	.module('accredible')
-  	.controller('CertificateController', ['$http', CertificateController]);
+  	.controller('CertificateController', ['$http', 'MagentoParser', 'CredentialCreator', CertificateController]);
 
-  function CertificateController($http) {
+  function CertificateController($http, MagentoParser, CredentialCreator) {
   	var vm = this;
     vm.loading = false;
     vm.credentials = [];
@@ -14,32 +14,22 @@
     activate();
 
     function activate() {
-      vm.credentials.push(templateCertificate());
+      vm.credentials.push(CredentialCreator.createDefault());
     }
 
   	function getMagentoUrl(url) {
       vm.loading = true;
       $http({
         method: 'GET',
-        url: '/get-url?url= + ' + url
+        url: '/get-url?url=' + url
       }).then(function(response) {
-        alert(response);
-        vm.loading = false;
+        vm.credentials = vm.credentials.concat(MagentoParser.parse(response.data.html, url));
       }, function(response) {
-        alert('There was an error retrieving the content from the server')
+        alert('There was an error retrieving the content from the server');
+      }).finally(function() {
         vm.loading = false;
       });
   	}
-
-    function templateCertificate() {
-      return {
-        id: '10023910',
-        name: 'Existing Credential Course Name',
-        date: 'Mar 20, 2017',
-        verifiedBy: 'Accredible',
-        url: 'https://www.credential.net/100000005'
-      };
-    }
   }
 
 })();

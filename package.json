@@ -4,19 +4,25 @@
   "main": "server.js",
   "author": "David \"oodavid\" King",
   "dependencies": {
+    "angular": "^1.6.4",
+    "angular-messages": "^1.6.4",
     "bluebird": "^3.5.0",
     "express": "^4.15.2",
+    "moment": "^2.18.1",
     "node-horseman": "^3.2.0",
     "phantomjs-prebuilt": "^2.1.14",
-    "angular": "^1.6.4",
-    "angular-messages": "^1.6.4"
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/accredible/accredible-fullstack-assessment.git"
   },
   "scripts": {
-    "start": "webpack; node server.js"
+    "start": "webpack; node server.js",
+    "test": "karma start karma.conf.js"
   },
   "description": "This starter repo uses node / npm and has the following features to help you get started:",
   "bugs": {
@@ -26,9 +32,11 @@
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "angular-mocks": "^1.6.4",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
+    "karma-webpack": "^2.0.3",
     "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^2.5.1"
   }

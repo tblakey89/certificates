@@ -1,6 +1,8 @@
 require('./app/app.js');
 require('./app/index.controller.js');
 require('./app/certificates/certificate.controller.js');
+require('./app/certificates/services/credential-creator.service.js');
+require('./app/certificates/services/magento-parser.service.js');
 require('./app/certificates/add-credential-form/add-credential-form.component.js');
 require('./app/certificates/add-credential-form/add-credential-form.template.js');
 require('./app/certificates/credential/credential.component.js');
